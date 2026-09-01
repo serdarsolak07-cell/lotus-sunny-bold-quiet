@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0b0c0b;
+  --color-surface: #141514;
+  --color-raised: #1c1d1c;
+  --color-inset: #080908;
+  --color-fg: #ebeae4;
+  --color-muted: #8d8c85;
+  --color-subtle: #6a6a64;
+  --color-accent: #9bb5a8;
+  --color-accent-fg: #0b0c0b;
+  --color-line: color-mix(in oklab, #ebeae4 12%, transparent);
+  --color-line-strong: color-mix(in oklab, #ebeae4 22%, transparent);
+  --color-danger: #c45c4a;
+  --color-ok: #7d9a7a;
+
+  --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", serif;
+  --font-sans: "Source Sans 3", "Source Sans Pro", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "SF Mono", ui-monospace, Menlo, monospace;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+
+  --shadow-panel: 0 0 0 1px color-mix(in oklab, #ebeae4 8%, transparent);
+  --shadow-panel-hover: 0 0 0 1px color-mix(in oklab, #ebeae4 14%, transparent);
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-bg);
+    color: var(--color-fg);
+    min-height: 100dvh;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-accent) 35%, transparent);
+    color: var(--color-fg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.paper-grain {
+  background-image:
+    radial-gradient(1200px 600px at 12% -10%, color-mix(in oklab, var(--color-accent) 8%, transparent), transparent 55%),
+    radial-gradient(900px 480px at 100% 0%, color-mix(in oklab, var(--color-fg) 4%, transparent), transparent 50%);
+}
+
+.hairline {
+  box-shadow: var(--shadow-panel);
+}
+
+.prose-atlas p + p {
+  margin-top: 1rem;
+}
+
+.prose-atlas ul {
+  margin: 0.85rem 0;
+  padding-left: 1.15rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.prose-atlas li {
+  list-style: disc;
+  color: var(--color-fg);
+}
+
+.prose-atlas li::marker {
+  color: var(--color-accent);
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-muted) 0%,
+    var(--color-fg) 50%,
+    var(--color-muted) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer-sweep 1.4s linear infinite;
+}
+
+@keyframes shimmer-sweep {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+

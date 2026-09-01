@@ -1,0 +1,9 @@
+node_modules
+.git
+.vercel
+screenshots
+artifacts
+public/korteks-pc.zip
+.grok/skills
+.grok/references
+*.log

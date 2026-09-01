@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/katalog",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "KORTEKS",
+      "hasCanvas": false,
+      "bodyTextLen": 8247,
+      "bodyTextHash": "673f13db4a36a5de6a0c3028feb5c7b151392b91c8dc89dcc747fa392445fdc1",
+      "bodyTextPrefix": "İçeriğe geç KORTEKS Atlas Katalog Laboratuvar Test Sohbet KATALO",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/katalog.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "KORTEKS",
+      "hasCanvas": false,
+      "bodyTextLen": 8247,
+      "bodyTextHash": "673f13db4a36a5de6a0c3028feb5c7b151392b91c8dc89dcc747fa392445fdc1",
+      "bodyTextPrefix": "İçeriğe geç KORTEKS Atlas Katalog Laboratuvar Test Sohbet KATALO",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/katalog-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/katalog.json"
+}

@@ -1,0 +1,6 @@
+/* TEAM */
+Yapımcı: SERDAR KAPTAN
+Site: KORTEKS
+
+/* SITE */
+Çekirdek bellek. Yapımcı adı silinmez.
